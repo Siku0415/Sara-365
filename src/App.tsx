@@ -65,10 +65,10 @@ const Hero = () => {
     // Exact link from the original website
     const apkUrl = 'https://sara365.fun/Sara365.apk';
     
-    // Track the download event
-    if (typeof window !== 'undefined' && (window as any).fbq) {
-      (window as any).fbq('track', 'Lead');
-      (window as any).fbq('track', 'CompleteRegistration');
+    // Track the download event using CAPI
+    if (typeof window !== 'undefined' && (window as any).trackEventWithCAPI) {
+      (window as any).trackEventWithCAPI('Lead');
+      (window as any).trackEventWithCAPI('CompleteRegistration');
     }
 
     // Create a temporary anchor element
@@ -443,10 +443,10 @@ const FloatingDownloadBtn = () => {
   const downloadAPK = () => {
     const apkUrl = 'https://sara365.fun/Sara365.apk';
     
-    // Track the download event
-    if (typeof window !== 'undefined' && (window as any).fbq) {
-      (window as any).fbq('track', 'Lead');
-      (window as any).fbq('track', 'CompleteRegistration');
+    // Track the download event using CAPI
+    if (typeof window !== 'undefined' && (window as any).trackEventWithCAPI) {
+      (window as any).trackEventWithCAPI('Lead');
+      (window as any).trackEventWithCAPI('CompleteRegistration');
     }
 
     const a = document.createElement('a');
